@@ -1,0 +1,49 @@
+header {
+  height: 4rem;
+  width: 100%;
+  padding: 1.5rem 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff44;
+
+  & h2 {
+    font-size: 1.2rem;
+
+    & span {
+      color: #ff3535;
+    }
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+
+    & img {
+      width: 2.5rem;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    & span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 250ms;
+    }
+
+    & span:hover {
+      color: #ff2b2b;
+    }
+
+    & .btn {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      border-bottom: 1px solid #cccccc6c;
+      color: #cccccca1;
+    }
+  }
+}

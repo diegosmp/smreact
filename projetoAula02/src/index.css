@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1a1a1ade;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: rgba(255, 255, 255, 0.404);
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.left {
+  left: 0;
+}
+
+.carousel-button.right {
+  right: 0;
+}
+
+.store-products {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.store-products::-webkit-scrollbar {
+  display: none;
+}
+
+.card-product {
+  flex: 0 0 auto;
+  width: 26rem;
+  height: 30rem;
+  padding: 2rem 0;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #242424;
+  cursor: pointer;
+  scroll-snap-align: start;
+
+  -webkit-box-shadow: 6px 8px 13px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 8px 13px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 8px 13px -6px rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.card-product img {
+  width: 10rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+.card-product img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.card-product h2 {
+  font-size: 1.3rem;
+}
+
+.card-product p {
+  font-size: 0.9rem;
+  text-align: justify;
+  margin: 0 2rem;
+}
+
+.card-product button {
+  width: 8rem;
+  height: 2rem;
+  border: 1.5px solid #3a3a3a;
+  background-color: transparent;
+  color: #242424;
+  cursor: pointer;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 200ms;
+}
+
+.card-product button:hover {
+  background-color: #242424;
+  color: #fff;
+  transform: scale(1.01);
+}
